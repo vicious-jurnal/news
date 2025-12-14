@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>News | vicious-jurnal</title>
+  <style>
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; background:#0b1020; color:#eaf0ff; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 48px 18px; }
+    .card {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 16px;
+      padding: 24px;
+      backdrop-filter: blur(8px);
+    }
+    h1 { margin: 0 0 8px; font-size: 34px; }
+    p { margin: 0 0 16px; line-height: 1.6; color: rgba(234,240,255,.85); }
+    .btns { display:flex; gap:10px; flex-wrap:wrap; margin-top: 14px; }
+    a.btn {
+      display:inline-block; padding:10px 14px; border-radius: 12px;
+      text-decoration:none; color:#0b1020; background:#eaf0ff; font-weight:700;
+    }
+    a.btn.ghost { background: transparent; color:#eaf0ff; border:1px solid rgba(255,255,255,.25); }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 18px; }
+    .post { padding: 14px; border-radius: 14px; background: rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.10); }
+    .post small { opacity:.75; }
+    .post a { color:#eaf0ff; text-decoration:none; font-weight:700; }
+    footer { margin-top: 22px; opacity:.7; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>📰 News</h1>
+      <p>Kumpulan update dan artikel terbaru. Halaman ini di-host di GitHub Pages.</p>
+
+      <div class="btns">
+        <a class="btn" href="./">Beranda</a>
+        <a class="btn ghost" href="https://github.com/vicious-jurnal/news" target="_blank" rel="noreferrer">Repo GitHub</a>
+      </div>
+
+      <div class="grid">
+        <div class="post">
+          <small>Update</small><br>
+          <a href="#">Judul Artikel 1</a>
+          <p>Ringkasan singkat artikel pertama.</p>
+        </div>
+        <div class="post">
+          <small>Rilis</small><br>
+          <a href="#">Judul Artikel 2</a>
+          <p>Ringkasan singkat artikel kedua.</p>
+        </div>
+        <div class="post">
+          <small>Catatan</small><br>
+          <a href="#">Judul Artikel 3</a>
+          <p>Ringkasan singkat artikel ketiga.</p>
+        </div>
+      </div>
+
+      <footer>© <span id="y"></span> vicious-jurnal</footer>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
